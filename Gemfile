@@ -28,6 +28,8 @@ gem 'pg', '~> 0.21.0'
 gem 'will_paginate', '~> 3.1.0'
 # Puxar templates sem a necessidade de Ajax
 gem 'angular-rails-templates'
+#popular BD
+gem 'faker'
 
 #--------FIM------------
 # Use Capistrano for deployment
@@ -44,7 +46,6 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
