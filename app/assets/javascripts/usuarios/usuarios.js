@@ -1,6 +1,6 @@
 app.controller('UsuariosController', function($http, $scope, $location){
     var page = 1;
-    var url = 'http://localhost:3000/api/usuarios?page=';
+    var url = 'https://angularjs-ruby-application.herokuapp.com/api/usuarios?page=';
     $scope.hasNext = true;
     $scope.hasPrevious = false;
     $scope.notFound = false;
