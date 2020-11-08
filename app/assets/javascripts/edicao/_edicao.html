@@ -1,0 +1,84 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+         <div class="col-12 d-flex justify-content-center ">
+            <form ng-submit="atualizar()" class="form bg-dark px-5 pt-3 pb-1 rounded">
+                <div class="row d-flex justify-content-between">
+                    <div>               
+                         <h2 class="text-white">Editar Usuário</h2>
+                    </div>
+                    <div class="cadastro-info">
+                        <div><h11 class="cadastro-h11 pr-2">*</h11>Campo Obrigatório</div>
+                        <div><h11 class="cadastro-h11 pr-2">**</h11>Campo Obrigatório E Apenas Números</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h11 class="cadastro-h11 pr-2">*</h11><input ng-model="nome" type="text" placeholder="Nome" class="cadastro-input" required>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-12 col-sm-7">
+                            <h11 class="cadastro-h11">*</h11><h11 class="cadastro-h11 pr-2">*</h11>
+                            <input ng-model="cpf" class="cadastro-input" type="text" placeholder="CPF" required>
+                        </div>
+                        <div class="col-12 col-sm-5 pt-4 pt-sm-0">
+                            <div class="row">
+                                <div class="col-12 cadastro-data-font"><h11 class="cadastro-h11 pr-2">*</h11>Data de Nascimento</div>
+                                <div class="col-12"><input ng-model="data" class="form-control" type="date" placeholder="" required></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <h11 class="cadastro-h11 pr-2">*</h11><input ng-model="email" class="cadastro-input" type="email" placeholder="Email" required>
+                        </div>
+                        <div class="col-12 col-sm-6 pt-3 pt-sm-0">
+                            <h11 class="cadastro-h11">*</h11><h11 class="cadastro-h11 pr-2">*</h11>
+                            <input ng-model="telefone" class="cadastro-input" type="tel" placeholder="Telefone" required>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group py-4">
+                    <div class="cadastro-divider"></div>
+                </div>
+                <div class="form-group"><h4 class="text-white">Endereço</h4></div>
+                <div class="form-group pb-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-4">
+                            <h11 class="cadastro-h11">*</h11><h11 class="cadastro-h11 pr-2">*</h11>
+                            <input ng-model="cep" type="text" placeholder="CEP" class="cadastro-input" required>
+                        </div>
+                        <div class="col-6 col-sm-2 cadastro-data-font pt-3 pt-sm-0">
+                            <div class="row d-flex">
+                                <div>UF</div>
+                                <div  class="pl-2">
+                                    <select ng-change="carregaCidades()" ng-model="uf" class="usuario-select">
+                                        <option  ng-repeat="uf in ufs | orderBy: 'sigla'">{{uf.sigla}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 cadastro-data-font pt-3 pt-sm-0">
+                            <div class="row d-flex">
+                                <div>Cidade</div>
+                                <div  class="pl-2">
+                                    <select ng-model="cidade" class="usuario-select usuario-select-cidade">
+                                        <option ng-repeat="cidade in cidades | orderBy: 'nome'">{{cidade.nome}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="d-flex justify-content-around">
+                        <button  type="submit" class="cadastro-btn px-5 py-2">Atualizar</button>
+                        <button ng-click="excluir()" type="button" class="cadastro-btn px-5 py-2">Excluir</button>
+                    </div>
+                </div>
+            </form>
+         </div>   
+    </div>
+</div>

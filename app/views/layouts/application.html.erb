@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>desafio-app</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+<body ng-app="desafio-app">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark py-3 py-sm-2">
+    <a class="navbar-brand" href="/">
+      <img src="ruby.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <div class="d-inline-block font-italic">Ruby</div> 
+      <img src="angular.png" width="120" height="30" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-when-collapse" aria-controls="navbar-when-collapse" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-when-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/usuarios">Usuários<span class="sr-only">(página atual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/cadastrar">Cadastrar-se</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <ng-view></ng-view>
+</body>
+</html>

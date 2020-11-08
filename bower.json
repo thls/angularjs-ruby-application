@@ -1,0 +1,23 @@
+{
+  "name": "desafio-app",
+  "description": "",
+  "main": "",
+  "authors": [
+    "thls <thls@cin.ufpe.br>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/thls/desafio-viitra",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "jquery": "^3.5.1"
+  }
+}

@@ -1,0 +1,51 @@
+.cadastro-input{
+	width: 70%;
+	border:0px solid white;
+	border-bottom: 1px solid #aaa;
+    transition: all .5s ease;
+	background-color: #343a40;
+	color: #aaa;
+    outline: none;
+
+}
+.cadastro-input:focus{
+    width: 90%;	
+}
+.cadastro-input::placeholder{
+    font-size: 13px;
+    font-style: italic;
+    color: white;
+}
+.cadastro-btn{
+	transition: all .5s ease;
+	border-radius: 30px;
+	color:white;
+	background-color: #ad1e22;
+    width: 40%;
+    border: 0px solid transparent;
+}
+.cadastro-btn:hover{
+    box-shadow: 2px 2px 3px #ad1e22;
+}
+.cadastro-divider{
+    border-bottom: 2px solid #ad1e22;
+}
+.cadastro-h11{
+    font-size: 12px;
+    color:  #ad1e22;
+}
+.cadastro-info{
+    color: gray;
+    font-size: 12px;
+}
+.cadastro-data-font{
+    font-size: 14px;
+    color: gray;
+    font-style: italic;
+}
+.usuario-select{
+    border-radius: 5px;
+}
+.usuario-select-cidade{
+    width: 100%;
+}

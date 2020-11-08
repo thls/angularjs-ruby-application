@@ -1,0 +1,72 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+         <div class="col-12 d-flex justify-content-center ">
+            <form class="form bg-dark px-5 pt-3 pb-1 rounded">
+                <div class="row d-flex justify-content-between">
+                    <div>               
+                         <h2 class="text-white">Informações do usuário</h2>
+                    </div>
+                    <div class="cadastro-info">
+                        <div><h11 class="cadastro-h11 pr-2">*</h11>Campo Obrigatório</div>
+                        <div><h11 class="cadastro-h11 pr-2">**</h11>Campo Obrigatório E Apenas Números</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h11 class="cadastro-h11 pr-2">*</h11><input ng-model="nome" type="text" placeholder="Nome" class="cadastro-input" disabled>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-7">
+                            <h11 class="cadastro-h11">*</h11><h11 class="cadastro-h11 pr-2">*</h11>
+                            <input ng-model="cpf" class="cadastro-input" type="text" placeholder="CPF" disabled>
+                        </div>
+                        <div class="col-5">
+                            <div class="row">
+                                <div class="col-12 cadastro-data-font"><h11 class="cadastro-h11 pr-2">*</h11>Data de Nascimento</div>
+                                <div class="col-12"><input ng-model="data" class="form-control" type="date" placeholder="" disabled></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-6">
+                            <h11 class="cadastro-h11 pr-2">*</h11><input ng-model="email" class="cadastro-input" type="email" placeholder="Email" disabled>
+                        </div>
+                        <div class="col-6">
+                            <h11 class="cadastro-h11">*</h11><h11 class="cadastro-h11 pr-2">*</h11>
+                            <input ng-model="telefone" class="cadastro-input" type="tel" placeholder="Telefone" disabled>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group py-4">
+                    <div class="cadastro-divider"></div>
+                </div>
+                <div class="form-group"><h4 class="text-white">Endereço</h4></div>
+                <div class="form-group pb-4">
+                    <div class="row">
+                        <div class="col-4">
+                            <h11 class="cadastro-h11">*</h11><h11 class="cadastro-h11 pr-2">*</h11>
+                            <input ng-model="cep" type="text" placeholder="---" class="cadastro-input" disabled>
+                        </div>
+                        <div class="col-3">
+                            <h11 class="cadastro-h11">*</h11><h11 class="cadastro-h11 pr-2">*</h11>
+                            <input ng-model="uf" type="text" placeholder="---" class="cadastro-input" disabled>
+                        </div>
+                        <div class="col-5">
+                            <h11 class="cadastro-h11">*</h11><h11 class="cadastro-h11 pr-2">*</h11>
+                            <input ng-model="cidade" type="text" placeholder="---" class="cadastro-input" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="d-flex justify-content-around">
+                        <button  ng-click="paraEdicao()" type="button" class="cadastro-btn px-5 py-2">Editar</button>
+                        <button ng-click="excluir()" type="button" class="cadastro-btn px-5 py-2">Excluir</button>
+                    </div>
+                </div>
+            </form>
+         </div>   
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="container-fluid mt-4 usuario-font">
+    <div class="row mt-3 px-4">
+        <div class="d-none col-md-3 p-3 d-md-flex bg-dark justify-content-center align-items-center">
+            <img class="usuario-img" src="ruby.png">
+        </div>
+        <div class="col-12 col-md-9 bg-light shadow-lg pt-3 usuario-top">
+            <div class="row">
+                <div class="col-10 col-md-6 col-lg-3 text-dark">
+                    <h2 class="usuario-h2" ng-click="refresh()">Usuários</h2>
+                </div>
+                <div class="col-2 d-md-none">
+                    <button ng-click="criar()" class="btn btn-xs bg-dark text-white">+</button>
+                </div>
+                <div class="col-md-6 d-none d-md-block d-lg-none">
+                    <button ng-click="criar()" class="usuario-new-button btn bg-dark text-white float-md-right">Novo Usuário</button>
+                </div>
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
+                    <input ng-model="nome" class="usuario-input" type="text" placeholder="Pesquisar Usuário">
+                    <img ng-click="findByName()" width="30" height="30" src="lupa.png" class="usuario-lupa">
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <button ng-click="criar()" class="usuario-new-button btn bg-dark text-white float-md-right">Novo Usuário</button>
+                </div>
+             
+            </div>
+            
+            <div class="pt-2 px-sm-3 row no-gutters table-responsive usuario-table">
+                <table class="table table-sm table-striped">
+                    <thead class="bg-dark text-white">
+                        <tr>
+                            <th class="d-none d-lg-table-cell" scope="col">CPF</th>
+                            <th class="d-none d-sm-table-cell" scope="col">Nome</th>
+                            <th class="d-none d-sm-table-cell" scope="col"></th>
+                            <th class="d-none d-md-table-cell" scope="col">Data de Nascimento</th>
+                            <th scope="col">Email</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="usuario in usuarios">
+                            
+                            <td  class="usuario-td d-none d-lg-table-cell" ng-click="info(usuario.id)" scope="col">{{usuario.cpf}}</td>
+                            <td class="usuario-td d-none d-sm-table-cell" ng-click="info(usuario.id)" colspan="2" scope="col">{{usuario.nome}}</td>
+                            <td class="usuario-td d-none d-md-table-cell" ng-click="info(usuario.id)" scope="col">{{toDate(usuario.data_nascimento)}}</td>
+                            <td class="usuario-td" ng-click="info(usuario.id)" colspan="2" scope="col">{{usuario.email}}</td>
+                            <td scope="col">
+                                <button ng-click="excluir(usuario.id)"  class="d-none d-lg-block ml-2 btn btn-sm btn-danger float-right mr-1">Excluir</button>
+                                <button ng-click="editar(usuario.id)" class="d-none d-lg-block btn btn-sm btn-success float-right">Editar</button>
+                                <button ng-click="editar(usuario.id)" class="d-lg-none btn btn-sm btn-success float-right"><img width="10" src="pencil.png"></button>
+                                <button ng-click="excluir(usuario.id)"  class="d-lg-none ml-2 btn btn-sm btn-danger float-right mr-1"> x </button>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        
+                    </tfoot>
+                </table>
+            </div>
+            <div ng-if="notFound" class="row d-flex justify-content-center">
+                Nenhum usuário encontrado!
+            </div>
+            <div class="row pb-4 px-3 d-flex justify-content-around">
+                <button class="btn bg-dark text-white usuario-bottom" ng-click="previous()" ng-if="hasPrevious">Anterior</button>
+                <button class="btn bg-dark text-white usuario-bottom" ng-click="next()" ng-if="hasNext">Próxima</button>
+            </div>
+        </div>
+    </div>
+</div>
