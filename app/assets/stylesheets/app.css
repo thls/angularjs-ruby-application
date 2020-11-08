@@ -1,7 +1,6 @@
 body{
     background-color: #e1e2e4;
-    font-family: cursive;
-
+    font-family: cursive, Helvetica, Arial, sans-serif;
 }
 @media (min-width: 320px) {
 	html{

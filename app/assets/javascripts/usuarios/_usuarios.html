@@ -29,11 +29,11 @@
                     <thead class="bg-dark text-white">
                         <tr>
                             <th class="d-none d-lg-table-cell" scope="col">CPF</th>
-                            <th class="d-none d-sm-table-cell" scope="col">Nome</th>
-                            <th class="d-none d-sm-table-cell" scope="col"></th>
-                            <th class="d-none d-md-table-cell" scope="col">Data de Nascimento</th>
-                            <th scope="col">Email</th>
+                            <th scope="col">Nome</th>
                             <th scope="col"></th>
+                            <th class="d-none d-md-table-cell" scope="col">Data de Nascimento</th>
+                            <th class="d-none d-sm-table-cell" scope="col">Email</th>
+                            <th class="d-none d-sm-table-cell" scope="col"></th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -41,9 +41,9 @@
                         <tr ng-repeat="usuario in usuarios">
                             
                             <td  class="usuario-td d-none d-lg-table-cell" ng-click="info(usuario.id)" scope="col">{{usuario.cpf}}</td>
-                            <td class="usuario-td d-none d-sm-table-cell" ng-click="info(usuario.id)" colspan="2" scope="col">{{usuario.nome}}</td>
+                            <td class="usuario-td" ng-click="info(usuario.id)" colspan="2" scope="col">{{usuario.nome}}</td>
                             <td class="usuario-td d-none d-md-table-cell" ng-click="info(usuario.id)" scope="col">{{toDate(usuario.data_nascimento)}}</td>
-                            <td class="usuario-td" ng-click="info(usuario.id)" colspan="2" scope="col">{{usuario.email}}</td>
+                            <td class="usuario-td d-none d-sm-table-cell" ng-click="info(usuario.id)" colspan="2" scope="col">{{usuario.email}}</td>
                             <td scope="col">
                                 <button ng-click="excluir(usuario.id)"  class="d-none d-lg-block ml-2 btn btn-sm btn-danger float-right mr-1">Excluir</button>
                                 <button ng-click="editar(usuario.id)" class="d-none d-lg-block btn btn-sm btn-success float-right">Editar</button>
